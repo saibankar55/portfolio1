@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Bankar - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.02rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .FirstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 80px 0;
+        }
+
+        .FirstSection>div {
+            width: 40%;
+        }
+
+        .leftsection {
+            font-size: 3rem;
+        }
+
+        .leftsection h1 {
+            font-size: 2rem;
+            /* Reduced the heading size */
+            margin-bottom: 1px;
+            /* Added spacing between heading and text */
+        }
+
+        .leftsection p {
+            text-align: justify;
+            font-size: 1rem;
+            /* Smaller paragraph text */
+            line-height: 1.6;
+            /* Improved readability */
+        }
+
+        .rightsection img {
+            width: 90%;
+            margin: 1.5px 0;
+        }
+
+        .rightsection1 img {
+            width: 80%;
+            margin: 1.5px 0;
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+        }
+
+        .secondsection,
+        .about,
+        .services,
+        .projects,
+        .contact {
+            max-width: 80vw;
+            margin: 80px auto;
+        }
+
+        .secondsection h1,
+        .about h1,
+        .services h1,
+        .projects h1,
+        .contact h1 {
+            font-size: 1.9rem;
+        }
+
+        .box {
+            background: white;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+        }
+
+        /* Styles for the Skills Section */
+        .skills {
+            max-width: 80vw;
+            margin: 0 auto;
+            /* Center the section horizontally */
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /* Ensure boxes are spaced evenly */
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .skill-box {
+            background-color: rgb(18, 18, 62);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: calc(33% - 20px);
+            /* Adjust to fit 3 boxes per row with gap */
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .skill-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-box p {
+            margin: 0;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .skills h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Projects Section Styles */
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /* Align boxes evenly */
+            gap: 20px;
+            /* Space between boxes */
+            margin-top: 40px;
+        }
+
+        .project-box {
+            background-color: rgb(18, 18, 62);
+            color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            width: calc(50% - 20px);
+            /* Adjust width to fit two boxes per row with gap */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-box img {
+            width: 50%;
+            height: 50%;
+            height: auto;
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-info h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .project-info p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .project-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Box Divider */
+        .box {
+            background: white;
+            width: 80vw;
+            height: 2px;
+            margin: 56px auto;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 80vw;
+            margin: 0 auto;
+        }
+
+        .contact-form-section {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .contact-form {
+            width: 100%;
+        }
+
+        .contact-form label {
+            display: block;
+            margin: 10px 0 5px;
+            color: white;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #333;
+            color: white;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .contact-form button {
+            background-color: rgb(170, 107, 228);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .contact-form button:hover {
+            background-color: rgb(153, 102, 204);
+        }
+
+        .contact-info-section {
+            width: 100%;
+            max-width: 500px;
+            margin-left: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+
+        .contact-info a {
+            color: rgb(170, 107, 228);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .social-media {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .social-media a {
+            display: inline-block;
+        }
+
+        .social-media img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Sai Bankar</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="FirstSection">
+            <div class="leftsection">
+                Hi, My name is <span class="purple">Sai Bankar</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+            </div>
+            <div class="rightsection">
+                <img src="dev1.png" alt="Developer Image">
+            </div>
+        </section>
+        <hr>
+
+        <!-- About Me Section -->
+        <section id="about" class="FirstSection">
+            <div class="leftsection">
+                <h1>About Me</h1>
+                <p>
+                    Hi, I am <span class="purple">Sai Bankar</span>, a Mechatronics Engineering graduate and a technology enthusiast.  
+                    My expertise spans automation, PLC programming, and robotics, empowering me to create smarter systems that solve real-world challenges.  
+                    I am passionate about merging innovation with creative design to develop solutions that push the boundaries of technology.
+                </p>
+                <p>
+                    Over the years, I have worked on diverse projects, from developing AI-powered virtual influencers to crafting immersive AR/VR applications.  
+                    These projects reflect my commitment to integrating cutting-edge technologies with user-centered design to redefine digital interaction.
+                </p>
+                <p>
+                    My journey has led me to explore areas such as photogrammetry, 3D scanning, and haptic integration with AR/VR systems.  
+                    I firmly believe in creating seamless, intuitive interfaces that bridge the gap between the physical and digital worlds.
+                </p>
+                <p>
+                    My accomplishments include participation in renowned maker fairs and competitions, such as the Maker Faire Rome, where my project  
+                    <span class="purple">"Rakshak: A Wearable Wild Animal Distraction Device"</span> was proudly selected.  
+                    I am always eager to collaborate on groundbreaking projects that expand the horizon of what technology can achieve.
+                </p>
+            </div>
+            <div class="rightsection1">
+                <img src="sai.png" alt="Sai Bankar" class="responsive-img">
+            </div>
+        </section>
+        
+
+
+        <hr>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <h1>Skills</h1>
+            <div class="skills-container">
+                <div class="skill-box">PLC Programming</div>
+                <div class="skill-box">Python</div>
+                <div class="skill-box">AI & Machine Learning </div>
+                <div class="skill-box">Mechatronics Technologies</div>                
+                <div class="skill-box">AR/VR for Education</div>
+                <div class="skill-box">CAD</div>
+                <div class="skill-box">Interactive Web Experiences (Three.js, A-Frame)</div>
+                <div class="skill-box">LaTeX</div>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <h1>Projects</h1>
+            <div class="projects-container">
+                <!-- Project 1: Rakshak -->
+                <div class="project-box">
+                    <div class="project-info">
+                        <h2>Wearable Animal Distraction Device - 'Rakshak'</h2>
+                        <p>
+                            'Rakshak' is a wearable device designed to deter wild animals from approaching human
+                            settlements.
+                            It uses ultrasonic signals and visual stimuli to keep animals at bay. This project aims to
+                            enhance
+                            safety for rural communities while preserving wildlife.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project 2: WebAR Virtual Shoe Try-On -->
+                <div class="project-box">
+                    <div class="project-info">
+                        <h2>WebAR Virtual Shoe Try-On</h2>
+                        <p>
+                            This project allows users to virtually try on various shoe models using WebAR technology.
+                            Users
+                            can select from thumbnail images of different shoes, and see them displayed on their feet
+                            through
+                            their device's camera. The application includes hand tracking for precise fitting.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project 3: AR Book Project - 'ARtistry' -->
+                <div class="project-box">
+                    <div class="project-info">
+                        <h2>MedIQ - AI Medical Chatbot</h2>
+                        <p>
+                            MedIQ is an AI-powered chatbot designed to explain complex medical terms and concepts in simple language.  
+                            It provides users with instant, reliable information, making it an ideal tool for patients, caregivers,  
+                            and anyone seeking a better understanding of medical topics.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project 4: AI Virtual Influencer -->
+                <div class="project-box">
+                    <div class="project-info">
+                        <h2>Brain Impact Simulator - Smart Helmet</h2>
+                        <p>
+                            This project involves the development of a smart helmet equipped with sensors to detect the point of impact  
+                            during an injury. The Brain Impact Simulator provides real-time data on the location and severity of the impact,  
+                            offering valuable insights for safety and medical evaluation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <hr>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h1>Contact Me</h1>
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <form class="contact-form">
+                        <label for="name">First Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="surname">Last Name:</label>
+                        <input type="text" id="surname" name="surname" required>
+
+                        <label for="mobile">Mobile Number:</label>
+                        <input type="tel" id="mobile" name="mobile" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="contact-info-section">
+                    <div class="contact-info">
+                        <p>If you want to collaborate or have any questions, feel free to reach out to me at:</p>
+                        <p>Email: <a href="mailto:saibankar44@gmail.com">saibankar@gmail.com</a></p>
+                        <p>Mobile: <a href="tel:+917385276867">+91 73852 76867</a></p>
+
+                        <!-- Social Media Links -->
+                        <div class="social-media">
+                            <a href="https://in.linkedin.com/in/sai-bankar" target="_blank">
+                                <img src="linkedin.png" alt="LinkedIn">
+                            </a>
+                            <a href="https://x.com/sai_bankar?t=haCA0cWqcXyDNSF5y7objw&s=09" target="_blank">
+                                <img src="twitter.jpg" alt="Twitter">
+                            </a>
+                            
+                            <a href="https://www.instagram.com/sai_bankar_4/" target="_blank">
+                                <img src="insta (1).png" alt="Instagram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box"></div>
+        </section>
+
+
+
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('#element', {
+        strings: ['Mechatronics Engineer', 'Maker', 'Student', 'Programmer'],
+        typeSpeed: 50,
+        backSpeed: 25, // Speed for deleting text
+        loop: true,    // Enables continuous looping
+        backDelay: 1000, // Delay before starting to delete text
+    });
+</script>
+
+</body>
+
+</html>
